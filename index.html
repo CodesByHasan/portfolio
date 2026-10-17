@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mehedi Hasan | Full-Stack Web Developer</title>
+<meta name="description" content="Portfolio of Mehedi Hasan, an aspiring full-stack web developer from Bangladesh.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F7FF;--card:#fff;--ink:#0B1030;--mut:#4A5278;--line:#D9DEF5;--a:#0E7490;--b:#6D28D9;--code:#070B1F;--head:'Sora',system-ui,sans-serif;--body:'Inter',system-ui,sans-serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070B1F;--card:#0E1433;--ink:#EAEEFF;--mut:#9AA6D6;--line:#222C5C;--a:#22D3EE;--b:#A78BFA}}
+:root[data-theme="dark"]{--bg:#070B1F;--card:#0E1433;--ink:#EAEEFF;--mut:#9AA6D6;--line:#222C5C;--a:#22D3EE;--b:#A78BFA}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--body)}
+a{color:inherit}h1,h2,h3{font-family:var(--head);margin:0;line-height:1.15}
+:focus-visible{outline:3px solid var(--a);outline-offset:3px;border-radius:6px}
+.w{max-width:1000px;margin:0 auto;padding:0 20px}
+section{padding:60px 0;border-top:1px solid var(--line)}
+h2{font-size:1.8rem;margin-bottom:8px}.sub{color:var(--mut);margin:0 0 28px;max-width:60ch}
+header{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0)}
+nav{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font:800 1.1rem var(--head);text-decoration:none}
+#menu{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-weight:500;font-size:.92rem}
+#menu a{text-decoration:none;color:var(--mut)}#menu a:hover{color:var(--ink)}
+.nb{display:flex;gap:8px;align-items:center}
+.ib{background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:8px;width:40px;height:40px;font-size:1.1rem;cursor:pointer}
+#burger{display:none}
+@media(max-width:760px){#burger{display:block}#menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px}
+#menu.open{display:flex}#menu a{display:block;padding:12px 0}}
+.hero{border-top:0;padding:50px 0 60px}
+.hg{display:grid;gap:36px;align-items:center}@media(min-width:800px){.hg{grid-template-columns:1.2fr .8fr}}
+.tag{display:inline-block;font-size:.85rem;font-weight:600;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--a);margin-bottom:16px}
+.hero h1{font-size:clamp(2.3rem,8vw,3.8rem);font-weight:800;letter-spacing:-.02em}.hero h1 span{color:var(--a)}
+.role{font:600 1.2rem var(--head);margin:12px 0}.hero p{color:var(--mut);max-width:52ch}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);background:none;color:var(--ink);font-size:1rem;font-family:inherit;cursor:pointer}
+.btn.m{background:var(--ink);color:var(--bg)}
+.soc{display:flex;flex-wrap:wrap;gap:10px}.soc a{padding:8px 14px;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-weight:500;font-size:.9rem;background:var(--card)}
+.soc a:hover{border-color:var(--a);color:var(--a)}
+.ph{width:min(280px,70vw);aspect-ratio:1;border-radius:50%;margin:0 auto;border:4px solid var(--a);overflow:hidden;display:grid;place-items:center;background:var(--code);color:#22D3EE;font:800 4.5rem var(--head)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.g2{display:grid;gap:28px}@media(min-width:800px){.g2{grid-template-columns:1.4fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.about p{margin:0 0 14px;color:var(--mut)}.about strong{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}.chips li{padding:5px 12px;border:1px solid var(--line);border-radius:8px;font-size:.9rem;background:var(--bg)}
+.sg{display:grid;gap:18px}@media(min-width:800px){.sg{grid-template-columns:repeat(3,1fr)}}
+.sk{margin-top:14px}.sk div{display:flex;justify-content:space-between;font-size:.9rem;font-weight:500;margin-bottom:5px}.sk span{color:var(--mut);font-weight:400}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--a),var(--b))}
+.tl{border-left:3px solid var(--a);padding-left:18px;margin-bottom:22px}.tl h3{font-size:1.1rem}.tl small{color:var(--mut)}.tl p{margin:6px 0 0;color:var(--mut)}
+.pg{display:grid;gap:18px}@media(min-width:700px){.pg{grid-template-columns:1fr 1fr}}
+.pc{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.pc svg{display:block;width:100%;height:auto}.pc .b{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}.pc h3{font-size:1.15rem}.pc p{margin:0;color:var(--mut);font-size:.95rem}.pc .btn{margin-top:auto;text-align:center}
+#detail{display:none;padding:40px 0 60px}.dt{display:grid;gap:22px}.dt h4{font:600 1.05rem var(--head);margin:0 0 8px}.dt ul{margin:0;padding-left:20px;color:var(--mut)}.dt li{margin-bottom:6px}
+.cg{display:grid;gap:12px}@media(min-width:700px){.cg{grid-template-columns:repeat(3,1fr)}}
+.cg a{display:block;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--card);text-decoration:none;font-weight:600}.cg span{display:block;color:var(--mut);font-weight:400;font-size:.9rem;overflow-wrap:anywhere}.cg a:hover{border-color:var(--a)}
+footer{padding:26px 0 calc(34px + env(safe-area-inset-bottom,0));border-top:1px solid var(--line);color:var(--mut);font-size:.9rem;text-align:center}
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:10px;display:none;z-index:20}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="w"><nav aria-label="Main">
+<a class="logo" href="#home">Mehedi Hasan</a>
+<ul id="menu"><li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#education">Education</a></li><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul>
+<div class="nb"><button class="ib" id="theme" aria-label="Switch theme">◐</button><button class="ib" id="burger" aria-label="Open menu">☰</button></div>
+</nav></div></header>
+
+<main id="home-page">
+<section class="hero" id="home"><div class="w hg">
+<div>
+<span class="tag">Open to junior and internship roles</span>
+<h1>Hi, I'm Mehedi <span>Hasan</span></h1>
+<p class="role">Aspiring Full-Stack Web Developer</p>
+<p>I build fast, responsive web apps with JavaScript, TypeScript, React.js and Next.js. Learn. Build. Solve. Improve.</p>
+<div class="btns"><button class="btn m" id="resume">Download Resume</button><a class="btn" href="#projects">View Projects</a></div>
+<div class="soc" id="soc"></div>
+</div>
+<div class="ph" id="ph"><img src="photo.jpg" alt="Mehedi Hasan" onerror="this.parentNode.textContent='MH'"></div>
+</div></section>
+
+<section id="about"><div class="w"><h2>About me</h2><p class="sub">My journey, the work I enjoy and who I am.</p>
+<div class="g2"><div class="about">
+<p><strong>My journey.</strong> I started with HTML and CSS, then moved to JavaScript and React, and now I build full-stack apps with Next.js, Node.js and MongoDB. I'm learning through the Programming Hero Batch 14 AI-Driven Full Stack Web Engineering course and by building real projects.</p>
+<p><strong>Work I enjoy.</strong> Clean, responsive interfaces, working with APIs, authentication, and turning an idea into an app people can open and use.</p>
+<p><strong>Beyond code.</strong> I enjoy exploring new tools, improving my old projects and solving problems step by step. I believe you don't just learn a technology, you build with it.</p>
+</div><div class="card"><h3 style="font-size:1.1rem;margin-bottom:12px">Quick facts</h3><ul class="chips"><li>Bangladesh</li><li>Bengali (native)</li><li>English (professional working)</li><li>Fast learner</li><li>Team player</li><li>Problem solver</li></ul></div></div></div></section>
+
+<section id="skills"><div class="w"><h2>Skills</h2><p class="sub">My own comfort level with each tool.</p><div class="sg" id="sg"></div></div></section>
+
+<section id="education"><div class="w"><h2>Education</h2><p class="sub">My academic background.</p>
+<div class="tl"><h3>Higher Secondary Certificate (HSC), Science</h3><small>Dhaka Eastern College, Dhaka · Completed 2023 · GPA 4.08 / 5.00</small></div>
+<div class="tl"><h3>Secondary School Certificate (SSC)</h3><small>Madertek Abdul Aziz School and College, Dhaka · Completed 2021 · GPA 4.72 / 5.00</small></div>
+<div class="tl"><h3>Programming Hero, Batch 14</h3><small>AI-Driven Full Stack Web Engineering · Ongoing</small><p>HTML, CSS, JavaScript, React, TypeScript, Next.js, Node.js, Express, MongoDB, authentication and deployment.</p></div>
+</div></section>
+
+<section id="experience"><div class="w"><h2>Experience</h2><p class="sub">I'm early in my career, so my experience comes from hands-on project work.</p>
+<div class="tl"><h3>Self-directed web developer</h3><small>Personal projects · Ongoing</small><p>Designed, built and deployed four web apps on Vercel, using React, Next.js, Tailwind CSS, daisyUI and REST APIs, with source code on GitHub.</p></div>
+<p class="sub">I'm looking for a junior or internship role where I can learn from a team and contribute from day one.</p></div></section>
+
+<section id="projects"><div class="w"><h2>Projects</h2><p class="sub">Apps I built and put online. Open a project for the full details.</p><div class="pg" id="pg"></div></div></section>
+
+<section id="contact"><div class="w"><h2>Contact</h2><p class="sub">I'm open to junior roles, internships and collaboration. Reach me directly.</p><div class="cg" id="cg"></div></div></section>
+</main>
+
+<main id="detail"><div class="w" id="dt"></div></main>
+<footer><div class="w">© <span id="yr"></span> Mehedi Hasan · Built with HTML, CSS and JavaScript</div></footer>
+<div id="toast" role="status">Resume coming soon</div>
+
+<script>
+/* ===== EDIT YOUR DETAILS HERE ===== */
+var C={email:"mdhasan365909@gmail.com",phone:"+8801626373876",whatsapp:"8801626373876",
+github:"https://github.com/CodesByHasan",linkedin:"https://www.linkedin.com/in/mehedi-m-hasan",facebook:"",
+resume:""}; /* resume: put your resume link or file name, e.g. "resume.pdf" */
+
+var SK=[["Frontend",[["HTML5 / CSS3",90],["JavaScript (ES6+)",80],["React.js",80],["Tailwind CSS",85],["daisyUI",80],["Next.js",65],["TypeScript",60]]],
+["Backend and APIs",[["REST APIs",65],["Node.js",55],["Express.js",50],["MongoDB",50],["Authentication (Better Auth)",50]]],
+["Tools",[["Git and GitHub",75],["Vercel deployment",75],["Vite",70],["Postman",65],["VS Code",85]]]];
+
+var PR=[
+{n:"Movie Explorer",c:"#0E7490",img:"movie-explorer.jpg",shot:"movie-explorer-shot.jpg",t:["React.js","React Router","Tailwind CSS","DaisyUI","TVMaze API","Vite"],
+d:"A responsive movie and TV show discovery app. Users can search titles, browse genres, see ratings and premiere dates, and open detailed show information.",
+live:"https://movie-explorer-zeta-one.vercel.app/",git:"https://github.com/CodesByHasan/Movie-explorer",
+ch:["Handling loading states and missing data from the TVMaze API","Building clean routing between the list and detail pages","Keeping the layout responsive with different poster sizes"],
+fu:["Add favorites saved in local storage","Add pagination and more filters","Add a dark and light theme toggle"]},
+{n:"Dev Stack Builder",c:"#6D28D9",img:"dev-stack.jpg",t:["React","TypeScript","Tailwind CSS","DaisyUI","React-Toastify","Vite"],
+d:"A web app where developers browse technologies, filter them by category and build a personalized development stack with instant feedback.",
+live:"https://dev-stack-builder-lilac.vercel.app/",git:"https://github.com/CodesByHasan/Dev-Stack-Builder",
+ch:["Preventing duplicate technologies in the stack","Typing props and state correctly with TypeScript interfaces","Updating the stack UI instantly as items are added or removed"],
+fu:["Save and share a stack with a link","Add more technologies and learning resources","Add drag and drop ordering"]},
+{n:"BazarDor",c:"#047857",t:["Next.js","Better Auth","MongoDB","DaisyUI","REST API"],
+d:"A product price discovery app with user sign-in, a profile page with update information, and REST API integration.",
+live:"https://bazar-dor-umber.vercel.app/",git:"https://github.com/CodesByHasan/bazar-dor",
+ch:["Setting up authentication and protected pages with Better Auth","Building the profile update feature with form handling","Connecting the app to MongoDB and API routes"],
+fu:["Add price comparison charts","Add favorites and price alerts","Add an admin dashboard"]},
+{n:"Fit-log",c:"#B45309",img:"fit-log.jpg",t:["Next.js","React","Tailwind CSS","DaisyUI","React Toastify","REST API"],
+d:"A workout app with workout details, personal workout planning, saved workouts and progress tracking.",
+live:"https://fit-log-woad-eight.vercel.app/",git:"https://github.com/CodesByHasan/Fit-log",
+ch:["Managing saved workouts and plans across pages","Designing reusable components for workout cards","Keeping progress data consistent after updates"],
+fu:["Add charts for progress over time","Add a backend with user accounts","Add reminders for planned workouts"]}];
+
+function $(i){return document.getElementById(i)}
+function art(p){var s='<svg viewBox="0 0 400 210" role="img" aria-label="'+p.n+' preview"><rect width="400" height="210" fill="'+p.c+'"/><rect x="30" y="28" width="340" height="154" rx="10" fill="#070B1F"/><circle cx="48" cy="46" r="4" fill="#ef4444"/><circle cx="62" cy="46" r="4" fill="#f59e0b"/><circle cx="76" cy="46" r="4" fill="#10b981"/><rect x="48" y="68" width="150" height="14" rx="4" fill="#fff"/><rect x="48" y="92" width="220" height="8" rx="3" fill="#64748b"/><rect x="48" y="112" width="96" height="48" rx="6" fill="'+p.c+'"/><rect x="154" y="112" width="96" height="48" rx="6" fill="#1e293b"/><rect x="260" y="112" width="96" height="48" rx="6" fill="#1e293b"/><text x="200" y="198" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle" opacity=".8">'+p.n+'</text></svg>';
+  if(!p.img)return s;
+  return '<div style="position:relative">'+s+'<img src="'+p.img+'" alt="'+p.n+' project image" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#070B1F" onerror="this.remove()"></div>'}
+function chips(a){return '<ul class="chips">'+a.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>'}
+function li(a){return '<ul>'+a.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>'}
+
+/* social + contact */
+var S=[["GitHub",C.github],["LinkedIn",C.linkedin],["Facebook",C.facebook],["Email","mailto:"+C.email]];
+$("soc").innerHTML=S.filter(function(s){return s[1]}).map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener">'+s[0]+'</a>'}).join('');
+var CT=[["Email",C.email,"mailto:"+C.email],["Phone",C.phone,"tel:"+C.phone],["WhatsApp","Chat on WhatsApp","https://wa.me/"+C.whatsapp]];
+$("cg").innerHTML=CT.map(function(c){return '<a href="'+c[2]+'">'+c[0]+'<span>'+c[1]+'</span></a>'}).join('');
+
+/* skills */
+$("sg").innerHTML=SK.map(function(g){return '<div class="card"><h3 style="font-size:1.1rem">'+g[0]+'</h3>'+g[1].map(function(s){return '<div class="sk"><div>'+s[0]+'</div><div class="bar" role="img" aria-label="'+s[0]+' level"><i style="width:'+s[1]+'%"></i></div></div>'}).join('')+'</div>'}).join('');
+
+/* projects */
+$("pg").innerHTML=PR.map(function(p,i){return '<article class="pc">'+art(p)+'<div class="b"><h3>'+p.n+'</h3><p>'+p.d.split('. ')[0]+'.</p><a class="btn" href="#/project/'+i+'">View More / Details</a></div></article>'}).join('');
+
+/* project detail page */
+function route(){
+  var m=location.hash.match(/^#\/project\/(\d+)/),h=$("home-page"),d=$("detail");
+  if(m&&PR[m[1]]){var p=PR[m[1]];h.style.display="none";d.style.display="block";
+    $("dt").innerHTML='<a class="btn" href="#projects">← Back to projects</a><div class="dt" style="margin-top:22px"><h1 style="font-size:2.2rem">'+p.n+'</h1><div class="card" style="padding:0;overflow:hidden">'+art(p)+'</div>'+(p.shot?'<div class="card" style="padding:0;overflow:hidden"><img src="'+p.shot+'" alt="'+p.n+' screenshot" style="display:block;width:100%;height:auto" onerror="this.parentNode.remove()"></div>':'')+'<div><h4>Main technology stack</h4>'+chips(p.t)+'</div><div><h4>Description</h4><p style="margin:0;color:var(--mut)">'+p.d+'</p></div><div><h4>Challenges faced</h4>'+li(p.ch)+'</div><div><h4>Future plans and improvements</h4>'+li(p.fu)+'</div><div class="btns"><a class="btn m" href="'+p.live+'" target="_blank" rel="noopener">Live project</a><a class="btn" href="'+p.git+'" target="_blank" rel="noopener">GitHub repository</a></div></div>';
+    window.scrollTo(0,0);
+  }else{d.style.display="none";h.style.display="block";
+    if(location.hash&&!/^#\/project/.test(location.hash)){var t=document.querySelector(location.hash);if(t)t.scrollIntoView()}}
+}
+window.addEventListener("hashchange",route);route();
+
+/* resume, menu, theme, footer */
+$("resume").onclick=function(){
+  if(C.resume){var a=document.createElement("a");a.href=C.resume;a.download="Mehedi-Hasan-Resume";a.target="_blank";a.click()}
+  else{var t=$("toast");t.style.display="block";setTimeout(function(){t.style.display="none"},2200)}
+};
+$("burger").onclick=function(){$("menu").classList.toggle("open")};
+$("menu").onclick=function(){$("menu").classList.remove("open")};
+$("theme").onclick=function(){var r=document.documentElement,d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);r.setAttribute("data-theme",d?"light":"dark")};
+$("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
